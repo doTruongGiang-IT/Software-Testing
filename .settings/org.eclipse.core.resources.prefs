@@ -1,4 +1,3 @@
 eclipse.preferences.version=1
-encoding//src/signIn_testing/TestCase03.java=UTF-8
-encoding//src/signIn_testing/TestCase04.java=UTF-8
-encoding//src/signIn_testing/TestCase05.java=UTF-8
+encoding//src/signIn_testing/inValidSignIn.java=UTF-8
+encoding//src/signIn_testing/validSignIn.java=UTF-8
