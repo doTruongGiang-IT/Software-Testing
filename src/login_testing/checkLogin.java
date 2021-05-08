@@ -10,6 +10,7 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -65,24 +66,34 @@ public class checkLogin extends BaseClass {
 					  };         
 				  };
 				  
-				  driver.findElement(By.xpath(pro.getProperty("login_button"))).click();
-			   
+				  driver.findElement(By.xpath(pro.getProperty("login_button"))).click();		  
+				  
 				  // Explicit wait condition for alert
-				  WebDriverWait waiter = new WebDriverWait(driver, 5);
-				  //alertIsPresent() condition applied
-				  if(waiter.until(ExpectedConditions.alertIsPresent()) != null) {
+				  WebDriverWait wait = new WebDriverWait(driver, 5);
+				  Alert alert = null;
+				  
+				  try {
+				      alert = wait.until(ExpectedConditions.alertIsPresent());
+				  } catch(Exception e) {
+					  System.out.println(e.getMessage());
+				  };
+
+				  if(alert == null) {
+					  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				      wait.until(ExpectedConditions.elementToBeClickable(By.xpath(pro.getProperty("icon_user")))).click();
+				      wait.until(ExpectedConditions.elementToBeClickable(By.xpath(pro.getProperty("logout_account")))).click();
+				      wait.until(ExpectedConditions.elementToBeClickable(By.xpath(pro.getProperty("icon_user")))).click();
+				      wait.until(ExpectedConditions.elementToBeClickable(By.xpath(pro.getProperty("login_account")))).click();
+					  sheet1.getRow(row.getRowNum()).createCell(2).setCellValue("Pass");
+					  FileOutputStream foutPass = new FileOutputStream(new File("C:\\Users\\DELL\\eclipse-workspace\\Do_An_KTPM\\excelData\\validAccount.xlsx"));
+					  workbook.write(foutPass);
+					  foutPass.close();
+				  } else {
 					  driver.switchTo().alert().accept();
 					  sheet1.getRow(row.getRowNum()).createCell(2).setCellValue("Fail");
-					  FileOutputStream fout=new FileOutputStream(new File("C:\\Users\\DELL\\eclipse-workspace\\Do_An_KTPM\\excelData\\validAccount.xlsx"));
-					  workbook.write(fout);
-					  fout.close();
-				  } else {
-					  driver.navigate().back();
-					  Thread.sleep(2000);
-					  sheet1.getRow(row.getRowNum()).createCell(2).setCellValue("Pass");
-					  FileOutputStream fout=new FileOutputStream(new File("C:\\Users\\DELL\\eclipse-workspace\\Do_An_KTPM\\excelData\\validAccount.xlsx"));
-					  workbook.write(fout);
-					  fout.close();
+					  FileOutputStream foutFail = new FileOutputStream(new File("C:\\Users\\DELL\\eclipse-workspace\\Do_An_KTPM\\excelData\\validAccount.xlsx"));
+					  workbook.write(foutFail);
+					  foutFail.close();
 				  };
 			  };
 			 

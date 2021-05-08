@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[=====Browser Session Started=====]]>
+    </line>
+    <line>
+      <![CDATA[=====Application Started=====]]>
+    </line>
+    <line>
+      <![CDATA[=====Browser Session End=====]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2021-05-08T09:44:13 ICT" name="Default suite" finished-at="2021-05-08T09:44:26 ICT" duration-ms="12744">
+    <groups>
+    </groups>
+    <test started-at="2021-05-08T09:44:13 ICT" name="Default test" finished-at="2021-05-08T09:44:26 ICT" duration-ms="12744">
+      <class name="login_testing.checkLogin">
+        <test-method is-config="true" signature="setupApplication()[pri:0, instance:login_testing.checkLogin@5ab9e72c]" started-at="2021-05-08T09:44:13 ICT" name="setupApplication" finished-at="2021-05-08T09:44:15 ICT" duration-ms="2510" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[=====Browser Session Started=====]]>
+            </line>
+            <line>
+              <![CDATA[=====Application Started=====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method signature="login()[pri:0, instance:login_testing.checkLogin@5ab9e72c]" started-at="2021-05-08T09:44:15 ICT" name="login" description="This TC will check valid account to login to application" finished-at="2021-05-08T09:44:24 ICT" duration-ms="9162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:login_testing.checkLogin@5ab9e72c]" started-at="2021-05-08T09:44:24 ICT" name="closeApplication" finished-at="2021-05-08T09:44:26 ICT" duration-ms="1046" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[=====Browser Session End=====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- login_testing.checkLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
