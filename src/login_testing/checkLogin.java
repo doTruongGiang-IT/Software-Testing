@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import base_class.BaseClass;
 
-public class checkLogin extends BaseClass {
+public class CheckLogin extends BaseClass {
 	
 	@Test(description="This TC will check valid account to login to application")
 	public void login() throws Exception {
@@ -60,7 +60,11 @@ public class checkLogin extends BaseClass {
 					  if(cell.getColumnIndex()==0) {
 						  driver.findElement (By.xpath(pro.getProperty("emailLogin"))).sendKeys(cell.getStringCellValue());
 					  } else if(cell.getColumnIndex()==1){
-						  driver.findElement(By.xpath(pro.getProperty("passLogin"))).sendKeys(cell.getStringCellValue());
+						  if(cell.getCellType() == cell.getCellType().NUMERIC) {
+							  driver.findElement(By.xpath(pro.getProperty("passLogin"))).sendKeys(String.valueOf(cell.getNumericCellValue()));
+						  } else {
+							  driver.findElement(By.xpath(pro.getProperty("passLogin"))).sendKeys(cell.getStringCellValue());
+						  };
 					  } else{
 						  break; 
 					  };         

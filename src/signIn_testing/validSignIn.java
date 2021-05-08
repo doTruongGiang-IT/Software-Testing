@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import base_class.BaseClass;
 import page_factory.PageFac;
 
-public class validSignIn extends BaseClass {
+public class ValidSignIn extends BaseClass {
 	
 	@Test(description="This TC will perform valid login")
 	public void validSignin() {

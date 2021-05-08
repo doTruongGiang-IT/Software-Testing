@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.support.PageFactory;
 import page_factory.PageFac;
 
-public class inValidSignIn extends BaseClass {
+public class InValidSignIn extends BaseClass {
 	
 	@Test(description="This TC will perform invalid login")
 	public void invalidSignIn() {
