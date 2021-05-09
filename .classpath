@@ -38,5 +38,7 @@
 	<classpathentry kind="lib" path="C:/Users/DELL/eclipse-workspace/Do_An_KTPM/lib/poi/xmlbeans-4.0.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/eclipse-workspace/Do_An_KTPM/lib/poi/xmlgraphics-commons-2.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/eclipse-workspace/Do_An_KTPM/lib/poi/xmlsec-2.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/eclipse-workspace/Do_An_KTPM/lib/com.mysql.jdbc_5.1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/eclipse-workspace/Do_An_KTPM/lib/mysql-connector-java-8.0.22.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

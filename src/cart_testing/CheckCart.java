@@ -11,7 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import base_class.BaseClass;
-import page_factory.PageFac;
+import page_factory.CartPage;
 
 public class CheckCart extends BaseClass {
 
@@ -34,7 +34,7 @@ public class CheckCart extends BaseClass {
 		hover.moveToElement(bookCategories).perform();
 		
 		// Add product
-		PageFac addItem = PageFactory.initElements(driver, PageFac.class);
+		CartPage addItem = PageFactory.initElements(driver, CartPage.class);
 		addItem.addProduct();
 	};
 	
@@ -42,7 +42,7 @@ public class CheckCart extends BaseClass {
 	public void deleteProduct() {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// Delete product
-		PageFac deleteItem = PageFactory.initElements(driver, PageFac.class);
+		CartPage deleteItem = PageFactory.initElements(driver, CartPage.class);
 		deleteItem.deleteProduct();
 	};
 	
@@ -65,7 +65,7 @@ public class CheckCart extends BaseClass {
 		hover.moveToElement(bookCategories).perform();
 		
 		// Check total price
-		PageFac totalPrice = PageFactory.initElements(driver, PageFac.class);
+		CartPage totalPrice = PageFactory.initElements(driver, CartPage.class);
 		totalPrice.checkTotal();
 	};
 	

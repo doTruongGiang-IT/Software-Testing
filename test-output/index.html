@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1312738550\testng-customsuite.xml</span>
+                    <span>C:\Users\DELL\AppData\Local\Temp\testng-eclipse--1349920426\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,17 +104,22 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="cart_testing.CheckCart" class="method navigator-link" hash-for-method="addProduct">addProduct</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="data_testing.Admin" class="method navigator-link" hash-for-method="lockAccount">lockAccount</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="cart_testing.CheckCart" class="method navigator-link" hash-for-method="deleteProduct">deleteProduct</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="data_testing.Admin" class="method navigator-link" hash-for-method="loginWithLockedAccount">loginWithLockedAccount</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="cart_testing.CheckCart" class="method navigator-link" hash-for-method="totalPrice">totalPrice</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="data_testing.Admin" class="method navigator-link" hash-for-method="loginWithUnlockAccount">loginWithUnlockAccount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="data_testing.Admin" class="method navigator-link" hash-for-method="unLockAccount">unLockAccount</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -132,34 +137,43 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">cart_testing.CheckCart</span>
+              <span class="class-name">data_testing.Admin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addProduct">
-                  </a> <!-- addProduct -->
-                  <span class="method-name">addProduct</span>
+                  <a name="lockAccount">
+                  </a> <!-- lockAccount -->
+                  <span class="method-name">lockAccount</span>
                   <em>
-(This TC will check add product to shopping-cart)                  </em>
+(This TC will perform locking account)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="deleteProduct">
-                  </a> <!-- deleteProduct -->
-                  <span class="method-name">deleteProduct</span>
+                  <a name="loginWithLockedAccount">
+                  </a> <!-- loginWithLockedAccount -->
+                  <span class="method-name">loginWithLockedAccount</span>
                   <em>
-(This TC will check delete product to shopping-cart)                  </em>
+(This TC will perform login with locked account)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="totalPrice">
-                  </a> <!-- totalPrice -->
-                  <span class="method-name">totalPrice</span>
+                  <a name="loginWithUnlockAccount">
+                  </a> <!-- loginWithUnlockAccount -->
+                  <span class="method-name">loginWithUnlockAccount</span>
                   <em>
-(This TC will check total price)                  </em>
+(This TC will perform login with locked account)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="unLockAccount">
+                  </a> <!-- unLockAccount -->
+                  <span class="method-name">unLockAccount</span>
+                  <em>
+(This TC will perform unlock account above)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -167,7 +181,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\DELL\AppData\Local\Temp\testng-eclipse-1312738550\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\DELL\AppData\Local\Temp\testng-eclipse--1349920426\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -176,7 +190,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;cart_testing.CheckCart&quot;/&gt;
+      &lt;class name=&quot;data_testing.Admin&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -216,24 +230,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'totalPrice')
-data.setCell(0, 2, 'cart_testing.CheckCart')
-data.setCell(0, 3, 1451);
+data.setCell(0, 1, 'unLockAccount')
+data.setCell(0, 2, 'data_testing.Admin')
+data.setCell(0, 3, 6843);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'addProduct')
-data.setCell(1, 2, 'cart_testing.CheckCart')
-data.setCell(1, 3, 1399);
+data.setCell(1, 1, 'lockAccount')
+data.setCell(1, 2, 'data_testing.Admin')
+data.setCell(1, 3, 5768);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'deleteProduct')
-data.setCell(2, 2, 'cart_testing.CheckCart')
-data.setCell(2, 3, 170);
+data.setCell(2, 1, 'loginWithUnlockAccount')
+data.setCell(2, 2, 'data_testing.Admin')
+data.setCell(2, 3, 535);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'loginWithLockedAccount')
+data.setCell(3, 2, 'data_testing.Admin')
+data.setCell(3, 3, 491);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -259,23 +277,31 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">cart_testing.CheckCart</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">data_testing.Admin</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setupApplication</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">addProduct</span>
-                <span class="method-start">2286 ms</span>
+                <span class="method-name">lockAccount</span>
+                <span class="method-start">2431 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">totalPrice</span>
-                <span class="method-start">3688 ms</span>
+                <span class="method-name">loginWithLockedAccount</span>
+                <span class="method-start">8209 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">deleteProduct</span>
-                <span class="method-start">5140 ms</span>
+                <span class="method-name">unLockAccount</span>
+                <span class="method-start">8702 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginWithUnlockAccount</span>
+                <span class="method-start">15546 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">16083 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

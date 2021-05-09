@@ -35,13 +35,13 @@ public class CheckLogin extends BaseClass {
 		
 		try {
 			  File src=new File("C:\\Users\\DELL\\eclipse-workspace\\Do_An_KTPM\\excelData\\accountData.xlsx");
-			  FileInputStream fis=new FileInputStream(src);
+			  FileInputStream fis = new FileInputStream(src);
 			 
 			  // load the workbook
-			  XSSFWorkbook workbook=new XSSFWorkbook(fis);
+			  XSSFWorkbook workbook = new XSSFWorkbook(fis);
 			 
 			  // get the sheet which you want to modify or create
-			  XSSFSheet sheet1= workbook.getSheetAt(0);
+			  XSSFSheet sheet1 = workbook.getSheetAt(0);
 			  
 			  driver.findElement(By.xpath(pro.getProperty("icon_user"))).click();
 			  driver.findElement(By.xpath(pro.getProperty("login_account"))).click();

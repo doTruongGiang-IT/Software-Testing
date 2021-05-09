@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cart_testing.CheckCart">
+      <class name="data_testing.Admin">
         <methods>
-          <include name="totalPrice"/>
+          <include name="unLockAccount"/>
           <include name="setupApplication"/>
           <include name="closeApplication"/>
+          <include name="loginWithUnlockAccount"/>
         </methods>
-      </class> <!-- cart_testing.CheckCart -->
+      </class> <!-- data_testing.Admin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
