@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="18" passed="18" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[=====Browser Session Started=====]]>
@@ -11,12 +11,12 @@
       <![CDATA[=====Browser Session End=====]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-05-09T11:04:05 ICT" name="Default suite" finished-at="2021-05-09T11:04:22 ICT" duration-ms="16750">
+  <suite started-at="2021-05-09T16:38:17 ICT" name="Default suite" finished-at="2021-05-09T16:38:56 ICT" duration-ms="38601">
     <groups>
     </groups>
-    <test started-at="2021-05-09T11:04:05 ICT" name="Default test" finished-at="2021-05-09T11:04:22 ICT" duration-ms="16750">
-      <class name="data_testing.Admin">
-        <test-method is-config="true" signature="setupApplication()[pri:0, instance:data_testing.Admin@343570b7]" started-at="2021-05-09T11:04:05 ICT" name="setupApplication" finished-at="2021-05-09T11:04:08 ICT" duration-ms="2411" status="PASS">
+    <test started-at="2021-05-09T16:38:17 ICT" name="Default test" finished-at="2021-05-09T16:38:56 ICT" duration-ms="38601">
+      <class name="data_testing.DataDriven">
+        <test-method is-config="true" signature="setupApplication()[pri:0, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:17 ICT" name="setupApplication" finished-at="2021-05-09T16:38:20 ICT" duration-ms="2402" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=====Browser Session Started=====]]>
@@ -26,30 +26,196 @@
             </line>
           </reporter-output>
         </test-method> <!-- setupApplication -->
-        <test-method signature="lockAccount()[pri:1, instance:data_testing.Admin@343570b7]" started-at="2021-05-09T11:04:08 ICT" name="lockAccount" description="This TC will perform locking account" finished-at="2021-05-09T11:04:14 ICT" duration-ms="5768" status="PASS">
+        <test-method signature="getAccountData()[pri:1, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:20 ICT" name="getAccountData" description="This TC will get account data and export do excel" finished-at="2021-05-09T16:38:20 ICT" duration-ms="706" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- lockAccount -->
-        <test-method signature="loginWithLockedAccount()[pri:2, instance:data_testing.Admin@343570b7]" started-at="2021-05-09T11:04:14 ICT" name="loginWithLockedAccount" description="This TC will perform login with locked account" finished-at="2021-05-09T11:04:14 ICT" duration-ms="491" status="PASS">
+        </test-method> <!-- getAccountData -->
+        <test-method signature="getBookData()[pri:2, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:20 ICT" name="getBookData" description="This TC will get book data and export do excel" finished-at="2021-05-09T16:38:20 ICT" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithLockedAccount -->
-        <test-method signature="unLockAccount()[pri:3, instance:data_testing.Admin@343570b7]" started-at="2021-05-09T11:04:14 ICT" name="unLockAccount" description="This TC will perform unlock account above" finished-at="2021-05-09T11:04:21 ICT" duration-ms="6843" status="PASS">
+        </test-method> <!-- getBookData -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:21 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:21 ICT" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- unLockAccount -->
-        <test-method signature="loginWithUnlockAccount()[pri:4, instance:data_testing.Admin@343570b7]" started-at="2021-05-09T11:04:21 ICT" name="loginWithUnlockAccount" description="This TC will perform login with locked account" finished-at="2021-05-09T11:04:22 ICT" duration-ms="535" status="PASS">
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:21 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:23 ICT" duration-ms="2558" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Monster Box]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithUnlockAccount -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:data_testing.Admin@343570b7]" started-at="2021-05-09T11:04:22 ICT" name="closeApplication" finished-at="2021-05-09T11:04:22 ICT" duration-ms="661" status="PASS">
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:23 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:25 ICT" duration-ms="2348" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AllahuAkBa]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:25 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:28 ICT" duration-ms="2257" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hackathon]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:28 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:30 ICT" duration-ms="2314" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Kỹ Thuật Nâng Cao]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:30 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:32 ICT" duration-ms="2282" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Lập trình C và C++]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:32 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:35 ICT" duration-ms="2259" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[The Great Convergence]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:35 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:37 ICT" duration-ms="2295" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Machine Learning]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:37 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:39 ICT" duration-ms="2283" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Lập trình Java]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:39 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:41 ICT" duration-ms="2273" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Lập trình C#]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:41 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:44 ICT" duration-ms="2255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Lập trình PyThon]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:44 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:46 ICT" duration-ms="2357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cấu trúc dữ liệu và giải thuật]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:46 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:48 ICT" duration-ms="2310" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Các bài toán Quy Hoạch Động]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:48 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:51 ICT" duration-ms="2288" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Clean Code]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:51 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:53 ICT" duration-ms="2304" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Java Core 1st Edition]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBook -->
+        <test-method signature="searchBook(java.lang.String)[pri:3, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:53 ICT" name="searchBook" description="This TC will check book data" data-provider="bookdata" finished-at="2021-05-09T16:38:55 ICT" duration-ms="2286" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Fundamentals of IT]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchBook -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:data_testing.DataDriven@46fa7c39]" started-at="2021-05-09T16:38:55 ICT" name="closeApplication" finished-at="2021-05-09T16:38:56 ICT" duration-ms="659" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=====Browser Session End=====]]>
             </line>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- data_testing.Admin -->
+      </class> <!-- data_testing.DataDriven -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
