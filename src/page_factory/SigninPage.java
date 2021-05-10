@@ -40,4 +40,11 @@ public class SigninPage {
 		signin_button.click();
 	};
 	
+	public void continueSignInApp(String name, String mail, String pass) {
+		username.sendKeys(name);
+		email.sendKeys(mail);
+		password.sendKeys(pass);
+		signin_button.click();
+	};
+	
 }

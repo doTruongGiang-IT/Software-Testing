@@ -33,6 +33,10 @@ public class PageFac {
 	@CacheLookup
 	WebElement search_button;
 	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"nav-grid\"]/div/div/div[2]/h4/a")
+	@CacheLookup
+	WebElement searchItem;
+	
 	public void exportAccountData() {
 		String jdbcURL = "jdbc:mysql://localhost:3306/webdb?useSSL=false";
         String username = "root";
@@ -158,6 +162,9 @@ public class PageFac {
 		searchInput.sendKeys(name);
 		WebDriverWait wait = new WebDriverWait(driver, 500);
 		wait.until(ExpectedConditions.elementToBeClickable(search_button)).click();
+		if(searchItem.getText().toLowerCase().contains(name.toLowerCase())) {
+			System.out.println("Book name: " + searchItem.getText());
+		};
 	};
 
 }
