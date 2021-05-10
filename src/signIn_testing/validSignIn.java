@@ -9,7 +9,7 @@ import page_factory.SigninPage;
 
 public class ValidSignIn extends BaseClass {
 	
-	@Test(description="This TC will perform valid login")
+	@Test(description="This TC will perform valid signin")
 	public void validSignin() {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		int a = ((int) (Math.random()*(10000 - 1000))) + 1000;

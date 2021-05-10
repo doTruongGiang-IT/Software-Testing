@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/login_testing/CheckLogin.java=UTF-8
+encoding//src/login_testing/LoginTesting.java=UTF-8
 encoding//src/page_factory/EmployeePage.java=UTF-8
 encoding//src/signIn_testing/InValidSignIn.java=UTF-8
 encoding//src/signIn_testing/ValidSignIn.java=UTF-8

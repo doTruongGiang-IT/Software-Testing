@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[=====Browser Session Started=====]]>
@@ -7,13 +7,16 @@
     <line>
       <![CDATA[=====Application Started=====]]>
     </line>
+    <line>
+      <![CDATA[=====Browser Session End=====]]>
+    </line>
   </reporter-output>
-  <suite started-at="2021-05-09T21:36:22 ICT" name="Default suite" finished-at="2021-05-09T21:36:28 ICT" duration-ms="5926">
+  <suite started-at="2021-05-10T18:38:54 ICT" name="Default suite" finished-at="2021-05-10T18:38:58 ICT" duration-ms="3886">
     <groups>
     </groups>
-    <test started-at="2021-05-09T21:36:22 ICT" name="Default test" finished-at="2021-05-09T21:36:28 ICT" duration-ms="5926">
-      <class name="data_testing.Employee">
-        <test-method is-config="true" signature="setupApplication()[pri:0, instance:data_testing.Employee@609db43b]" started-at="2021-05-09T21:36:22 ICT" name="setupApplication" finished-at="2021-05-09T21:36:24 ICT" duration-ms="2079" status="PASS">
+    <test started-at="2021-05-10T18:38:54 ICT" name="Default test" finished-at="2021-05-10T18:38:58 ICT" duration-ms="3886">
+      <class name="login_testing.LoginTesting">
+        <test-method is-config="true" signature="setupApplication()[pri:0, instance:login_testing.LoginTesting@343570b7]" started-at="2021-05-10T18:38:54 ICT" name="setupApplication" finished-at="2021-05-10T18:38:56 ICT" duration-ms="1951" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=====Browser Session Started=====]]>
@@ -23,11 +26,30 @@
             </line>
           </reporter-output>
         </test-method> <!-- setupApplication -->
-        <test-method signature="addBook()[pri:5, instance:data_testing.Employee@609db43b]" started-at="2021-05-09T21:36:24 ICT" name="addBook" finished-at="2021-05-09T21:36:28 ICT" duration-ms="3823" status="PASS">
+        <test-method signature="inValidLoginEmail()[pri:1, instance:login_testing.LoginTesting@343570b7]" started-at="2021-05-10T18:38:56 ICT" name="inValidLoginEmail" description="This TC will perform invalid lognin with wrong email" finished-at="2021-05-10T18:38:57 ICT" duration-ms="918" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addBook -->
-      </class> <!-- data_testing.Employee -->
+        </test-method> <!-- inValidLoginEmail -->
+        <test-method signature="inValidLoginPassword()[pri:2, instance:login_testing.LoginTesting@343570b7]" started-at="2021-05-10T18:38:57 ICT" name="inValidLoginPassword" description="This TC will perform invalid lognin with wrong password" finished-at="2021-05-10T18:38:57 ICT" duration-ms="153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inValidLoginPassword -->
+        <test-method signature="inValidLoginEmail_Password()[pri:3, instance:login_testing.LoginTesting@343570b7]" started-at="2021-05-10T18:38:57 ICT" name="inValidLoginEmail_Password" description="This TC will perform invalid lognin with wrong email and password" finished-at="2021-05-10T18:38:57 ICT" duration-ms="124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inValidLoginEmail_Password -->
+        <test-method signature="validLogin()[pri:4, instance:login_testing.LoginTesting@343570b7]" started-at="2021-05-10T18:38:57 ICT" name="validLogin" description="This TC will perform valid lognin" finished-at="2021-05-10T18:38:58 ICT" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:login_testing.LoginTesting@343570b7]" started-at="2021-05-10T18:38:58 ICT" name="closeApplication" finished-at="2021-05-10T18:38:58 ICT" duration-ms="602" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[=====Browser Session End=====]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- login_testing.LoginTesting -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
