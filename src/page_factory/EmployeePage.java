@@ -1,11 +1,14 @@
 package page_factory;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.testng.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class EmployeePage {
 
@@ -117,6 +120,10 @@ public class EmployeePage {
 	@CacheLookup
 	WebElement productCategory;
 	
+	@FindBy(how = How.ID, using = "image")
+	@CacheLookup
+	WebElement productUploadImage;
+	
 	@FindBy(how = How.XPATH, using = "/html/body/div[1]/div[2]/div[2]/div/div/div/div/div/div/form/div[7]/div/p/button")
 	@CacheLookup
 	WebElement addNew_button;
@@ -141,41 +148,51 @@ public class EmployeePage {
 		Thread.sleep(2000);
 	};
 	
-	public void addCategory() throws Exception {
-		Thread.sleep(1000);
-		int id = ((int) (Math.random()*(100 - 10))) + 10;
-		categories_button.click();
+	public void addCategory(String id, String name) throws Exception {
 		Thread.sleep(1000);
 		addCategories_button.click();
-		categoryID.sendKeys(String.valueOf(id));
-		categoryName.sendKeys("Book of thiefs");
+		categoryID.sendKeys(id);
+		categoryName.sendKeys(name);
 		save_button.click();
 	};
 	
-	public void updateCategory() throws Exception {
+	public void manageCategory(String id, String name) throws Exception {
+		Thread.sleep(1000);
+		categories_button.click();
+		addCategory(id, name);
+	};
+	
+	public void updateCategory(String name) throws Exception {
 		Thread.sleep(1000);
 		updateCategories_button.click();
-		editCategoryName.sendKeys("Sách Kỹ Thuật Lập Trình Nâng Cao");
+		editCategoryName.clear();
+		editCategoryName.sendKeys(name);
 		editSave_button.click();
 	};
 	
-	public void changeStatusCategory() throws Exception {
+	public void changeStatusCategory(WebDriver driver) throws Exception {
 		Thread.sleep(1000);
-		String expected = "1";
-		toggleStatusCategory.click();
+		WebDriverWait wait = new WebDriverWait(driver, 500);
+		wait.until(ExpectedConditions.elementToBeClickable(toggleStatusCategory)).click();
 		Thread.sleep(1000);
-		Assert.assertEquals(statusCategory.getText(), expected);
+		String statusAfter = statusCategory.getText();
+		if(statusAfter.contains("0")) {
+			System.out.println("Book status after: Hiển thị");
+		}else {
+			System.out.println("Book status after: Ẩn");
+		};
 	};
 	
 	public void addBook() throws Exception {
 		Thread.sleep(1000);
 		addBook_button.click();
-		productName.sendKeys("Sách gián điệp mạng nâng cao");
-		productPrice.sendKeys("100");
+		productName.sendKeys("An ninh mang");
+		productPrice.sendKeys("300");
 		productDescription.sendKeys("Cuốn sách là câu chuyện người thực việc thực (tác giả cũng là nhân vật chính) kể về cuộc săn đuổi hacker bất đắc dĩ của một nhà khoa học chuyển tay ngang trở thành nhà quản lý hệ thống mạng máy tính ở Phòng Thí nghiệm  Lawrence Berkeley, California, Mỹ.");
 		Select category = new Select(productCategory);
 		Thread.sleep(1000);
 		category.selectByValue("5");
+		productUploadImage.sendKeys("C:\\Users\\DELL\\OneDrive\\Hình ảnh\\Cuộn phim\\machinelearning.jpg");
 		addNew_button.click();
 	};
 	
