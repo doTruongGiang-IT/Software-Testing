@@ -5,9 +5,9 @@
     <classes>
       <class name="data_testing.BookTesting">
         <methods>
+          <include name="toggleBook"/>
           <include name="setupApplication"/>
           <include name="closeApplication"/>
-          <include name="addBook"/>
         </methods>
       </class> <!-- data_testing.BookTesting -->
     </classes>

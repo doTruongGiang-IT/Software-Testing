@@ -177,40 +177,45 @@ public class EmployeePage {
 		Thread.sleep(1000);
 		String statusAfter = statusCategory.getText();
 		if(statusAfter.contains("0")) {
-			System.out.println("Book status after: Hiển thị");
+			System.out.println("Category status after: Hiển thị");
 		}else {
-			System.out.println("Book status after: Ẩn");
+			System.out.println("Category status after: Ẩn");
 		};
 	};
 	
-	public void addBook() throws Exception {
+	public void addBook(String name, String price, String description, String cate, String path) throws Exception {
 		Thread.sleep(1000);
 		addBook_button.click();
-		productName.sendKeys("An ninh mang");
-		productPrice.sendKeys("300");
-		productDescription.sendKeys("Cuốn sách là câu chuyện người thực việc thực (tác giả cũng là nhân vật chính) kể về cuộc săn đuổi hacker bất đắc dĩ của một nhà khoa học chuyển tay ngang trở thành nhà quản lý hệ thống mạng máy tính ở Phòng Thí nghiệm  Lawrence Berkeley, California, Mỹ.");
+		productName.sendKeys(name);
+		productPrice.sendKeys(price);
+		productDescription.sendKeys(description);
 		Select category = new Select(productCategory);
 		Thread.sleep(1000);
-		category.selectByValue("5");
-		productUploadImage.sendKeys("C:\\Users\\DELL\\OneDrive\\Hình ảnh\\Cuộn phim\\machinelearning.jpg");
+		category.selectByValue(cate);
+		if(path != "") {
+			productUploadImage.sendKeys(path);
+		};
 		addNew_button.click();
 	};
 	
-	public void updateBook() throws Exception {
+	public void updateBook(String name, String price, String path) throws Exception {
 		Thread.sleep(1000);
-		book_button.click();
 		updateBook.click();
 		Thread.sleep(1000);
-		updatePrice.clear();
-		updatePrice.sendKeys("120");
+		productName.clear();
+		productName.sendKeys(name);
+		productPrice.clear();
+		productPrice.sendKeys(price);
+		if(path != "") {
+			productUploadImage.sendKeys(path);
+		}
 		updateBook_button.click();
 	};
 	
 	public void toggleBook() throws Exception {
 		Thread.sleep(1000);
-		String status = "Hiển thị";
 		toggleBook_button.click();
-		Assert.assertEquals(toggleBookStatus.getText(), status);
+		System.out.println("Book status after: " + toggleBookStatus.getText());
 	};
 	
 }

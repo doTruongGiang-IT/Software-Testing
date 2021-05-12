@@ -129,9 +129,9 @@ public class CategoryTesting extends BaseClass {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		String status = driver.findElement(By.xpath("//*[@id=\"datatable\"]/tbody/tr[1]/td[3]")).getText();
 		if(status.contains("0")) {
-			System.out.println("Book status before: Hiển thị");
+			System.out.println("Category status before: Hiển thị");
 		}else {
-			System.out.println("Book status before: Ẩn");
+			System.out.println("Category status before: Ẩn");
 		};
 		EmployeePage changeStatusCategory = PageFactory.initElements(driver, EmployeePage.class);
 		changeStatusCategory.changeStatusCategory(driver);

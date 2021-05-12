@@ -11,12 +11,12 @@
       <![CDATA[=====Browser Session End=====]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-05-11T21:10:20 ICT" name="Default suite" finished-at="2021-05-11T21:10:26 ICT" duration-ms="6524">
+  <suite started-at="2021-05-12T12:23:42 ICT" name="Default suite" finished-at="2021-05-12T12:23:48 ICT" duration-ms="5837">
     <groups>
     </groups>
-    <test started-at="2021-05-11T21:10:20 ICT" name="Default test" finished-at="2021-05-11T21:10:26 ICT" duration-ms="6524">
+    <test started-at="2021-05-12T12:23:42 ICT" name="Default test" finished-at="2021-05-12T12:23:48 ICT" duration-ms="5837">
       <class name="data_testing.BookTesting">
-        <test-method is-config="true" signature="setupApplication()[pri:0, instance:data_testing.BookTesting@1356d4d4]" started-at="2021-05-11T21:10:20 ICT" name="setupApplication" finished-at="2021-05-11T21:10:22 ICT" duration-ms="2067" status="PASS">
+        <test-method is-config="true" signature="setupApplication()[pri:0, instance:data_testing.BookTesting@1356d4d4]" started-at="2021-05-12T12:23:42 ICT" name="setupApplication" finished-at="2021-05-12T12:23:45 ICT" duration-ms="2435" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=====Browser Session Started=====]]>
@@ -26,11 +26,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- setupApplication -->
-        <test-method signature="addBook()[pri:1, instance:data_testing.BookTesting@1356d4d4]" started-at="2021-05-11T21:10:22 ICT" name="addBook" finished-at="2021-05-11T21:10:26 ICT" duration-ms="3839" status="PASS">
+        <test-method signature="toggleBook()[pri:17, instance:data_testing.BookTesting@1356d4d4]" started-at="2021-05-12T12:23:45 ICT" name="toggleBook" finished-at="2021-05-12T12:23:47 ICT" duration-ms="2716" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addBook -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:data_testing.BookTesting@1356d4d4]" started-at="2021-05-11T21:10:26 ICT" name="closeApplication" finished-at="2021-05-11T21:10:26 ICT" duration-ms="599" status="PASS">
+        </test-method> <!-- toggleBook -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:data_testing.BookTesting@1356d4d4]" started-at="2021-05-12T12:23:47 ICT" name="closeApplication" finished-at="2021-05-12T12:23:48 ICT" duration-ms="659" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[=====Browser Session End=====]]>
